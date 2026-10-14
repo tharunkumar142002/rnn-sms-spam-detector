@@ -81,13 +81,49 @@ div.stButton > button:hover {
     color: white;
 }
 
+
 .hero-text {
     font-size: 17px;
     color: #d7e3ff;
 }
 
+/* =================================
+   FIX SMS INPUT TEXT VISIBILITY
+================================= */
+
+/* Dark background for SMS input */
+[data-testid="stTextArea"] div[data-baseweb="textarea"] {
+    background-color: #1b2945 !important;
+    border: 1px solid #6476a7 !important;
+    border-radius: 12px !important;
+}
+
+/* White text while typing */
+[data-testid="stTextArea"] textarea {
+    background-color: #1b2945 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+}
+
+/* Visible placeholder */
+[data-testid="stTextArea"] textarea::placeholder {
+    color: #a9b8d6 !important;
+    -webkit-text-fill-color: #a9b8d6 !important;
+    opacity: 1;
+}
+
+/* Visible input label */
+[data-testid="stTextArea"] label,
+[data-testid="stTextArea"] label p {
+    color: #e2e8f0 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # ==========================================
